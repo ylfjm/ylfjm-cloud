@@ -1,0 +1,44 @@
+server:
+  port: 30004
+  tomcat:
+    uri-encoding: utf-8
+spring:
+  application:
+    name: ylfjm-service-system
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    default-property-inclusion: non_null
+logging:
+  config: classpath:logback-spring.xml
+eureka:
+  instance:
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    prefer-ip-address: true
+    ip-address: ${spring.cloud.client.ip-address}
+    lease-renewal-interval-in-seconds: 5 # 默认30秒
+    lease-expiration-duration-in-seconds: 10 # 默认90秒
+    metadata-map:
+      zone: zone-1
+  client:
+    prefer-same-zone-eureka: true
+    region: shanghai
+    availability-zones:
+      shanghai: zone-1
+    registry-fetch-interval-seconds: 5 # 默认30秒
+    instance-info-replication-interval-seconds: 5 # 默认为30秒
+    service-url:
+      defaultZone: http://ylfjm:123456@localhost:30000/eureka
+      zone-1: http://ylfjm:123456@localhost:30000/eureka
+feign:
+  httpclient:
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 3000
+        readTimeout: 15000
+ribbon:
+  eager-load:
+    enabled: true
+    clients: ylfjm-service-user

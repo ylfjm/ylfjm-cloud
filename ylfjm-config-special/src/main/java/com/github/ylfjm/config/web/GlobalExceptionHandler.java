@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 /**
  * 全局异常处理类
  *
- * @author Zhang Bo
+ * @author YLFJM
  * @date 2018/8/6
  */
 @RestControllerAdvice

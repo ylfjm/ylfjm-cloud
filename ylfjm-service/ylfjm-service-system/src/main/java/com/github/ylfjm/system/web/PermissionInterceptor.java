@@ -22,7 +22,7 @@ import java.util.Set;
 /**
  * 业务管理系统权限拦截器
  *
- * @author Zhang Bo
+ * @author YLFJM
  * @date 2018/8/8.
  */
 @Slf4j

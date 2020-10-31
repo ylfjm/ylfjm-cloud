@@ -14,7 +14,7 @@ import java.util.Set;
 /**
  * 角色
  *
- * @author Zhang Bo
+ * @author YLFJM
  * @date 2018/10/30
  */
 @Table(name = "system_role")

@@ -9,7 +9,7 @@ import java.util.Date;
 /**
  * Spring MVC String转Date类型全局转换器
  *
- * @author Zhang Bo
+ * @author YLFJM
  * @date 2018/11/27
  */
 @Configuration

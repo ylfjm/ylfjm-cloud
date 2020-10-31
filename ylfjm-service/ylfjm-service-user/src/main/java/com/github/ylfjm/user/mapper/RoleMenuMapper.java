@@ -7,7 +7,7 @@ import tk.mybatis.mapper.common.Mapper;
 import java.util.List;
 
 /**
- * @author Zhang Bo
+ * @author YLFJM
  * @date 2018/11/2
  */
 public interface RoleMenuMapper extends Mapper<RoleMenu> {

@@ -13,7 +13,7 @@ import java.util.Date;
 /**
  * 部门
  *
- * @author Zhang Bo
+ * @author YLFJM
  * @date 2018/10/30
  */
 @Table(name = "system_department")

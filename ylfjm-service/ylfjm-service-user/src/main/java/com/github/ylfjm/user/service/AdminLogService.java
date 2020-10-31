@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * 管理员登录日志业务类
  *
- * @author Zhang Bo
+ * @author YLFJM
  * @date 2018/11/13
  */
 @Service

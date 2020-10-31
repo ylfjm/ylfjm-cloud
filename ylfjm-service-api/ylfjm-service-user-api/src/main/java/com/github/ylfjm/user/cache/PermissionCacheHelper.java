@@ -9,7 +9,7 @@ import java.util.Set;
 /**
  * 描述：权限缓存类，只在单机部署下使用，集群部署请使用redis实现
  *
- * @Author Zhang Bo
+ * @author YLFJM
  * @Date 2020/10/24
  */
 public class PermissionCacheHelper {

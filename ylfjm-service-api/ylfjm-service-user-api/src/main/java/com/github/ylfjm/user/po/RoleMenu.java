@@ -9,7 +9,7 @@ import javax.persistence.Table;
 /**
  * 角色-菜单关联
  *
- * @author Zhang Bo
+ * @author YLFJM
  * @date 2018/11/2
  */
 @Table(name = "system_role__menu")

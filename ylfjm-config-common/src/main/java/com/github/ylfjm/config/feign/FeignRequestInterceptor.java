@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * 解决Hystrix多线程模式request header参数传递
  *
- * @author Zhang Bo
+ * @author YLFJM
  * @date 2018/8/8
  */
 @Slf4j

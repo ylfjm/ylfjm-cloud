@@ -8,7 +8,7 @@ import java.io.Serializable;
 /**
  * 权限缓存
  *
- * @author Zhang Bo
+ * @author YLFJM
  * @date 2018/11/2
  */
 @Getter

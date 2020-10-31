@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * Feign请求前置拦截器
  *
- * @author Zhang Bo
+ * @author YLFJM
  * @date 2018/8/21
  */
 @Configuration

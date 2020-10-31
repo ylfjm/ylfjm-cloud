@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * 性别：1-男；2-女；
  *
- * @author Zhang Bo
+ * @author YLFJM
  * @date 2019/4/2
  */
 public enum SexType {

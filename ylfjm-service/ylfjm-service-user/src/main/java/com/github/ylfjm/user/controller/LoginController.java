@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * 描述：各端登录逻辑控制器
  *
- * @Author Zhang Bo
+ * @author YLFJM
  * @Date 2019/3/26
  */
 @RestController

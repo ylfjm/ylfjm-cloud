@@ -12,7 +12,7 @@ import java.util.Date;
 /**
  * 管理员登录日志
  *
- * @author Zhang Bo
+ * @author YLFJM
  * @date 2018/10/30
  */
 @Table(name = "system_admin_log")

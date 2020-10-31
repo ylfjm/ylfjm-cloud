@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Param;
 import tk.mybatis.mapper.common.Mapper;
 
 /**
- * @author Zhang Bo
+ * @author YLFJM
  * @date 2018/10/30
  */
 public interface DepartmentMapper extends Mapper<Department> {

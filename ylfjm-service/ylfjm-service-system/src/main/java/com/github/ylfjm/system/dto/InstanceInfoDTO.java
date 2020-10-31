@@ -8,7 +8,7 @@ import java.util.Date;
 /**
  * 描述：微服务实例信息
  *
- * @Author Zhang Bo
+ * @author YLFJM
  * @Date 2020/10/28
  */
 @Getter

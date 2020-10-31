@@ -9,7 +9,7 @@ import javax.persistence.Table;
 /**
  * 管理员-角色关联
  *
- * @author Zhang Bo
+ * @author YLFJM
  * @date 2018/11/2
  */
 @Table(name = "system_admin__role")

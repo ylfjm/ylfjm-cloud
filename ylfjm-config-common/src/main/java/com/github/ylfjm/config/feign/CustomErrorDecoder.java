@@ -17,7 +17,7 @@ import java.util.Map;
  * <b/>
  * 将业务异常包装成HystrixBadRequestException类型异常，使其能被全局异常处理器捕获。
  *
- * @Author Zhang Bo
+ * @author YLFJM
  * @Date 2019/1/10
  */
 @Configuration

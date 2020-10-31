@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * 描述：登录逻辑控制器
  *
- * @Author Zhang Bo
+ * @author YLFJM
  * @Date 2019/3/26
  */
 @RestController

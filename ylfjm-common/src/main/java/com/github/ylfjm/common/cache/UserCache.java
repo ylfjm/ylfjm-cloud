@@ -20,7 +20,7 @@ import java.net.URLDecoder;
 /**
  * 用户相关信息缓存类
  *
- * @author Zhang Bo
+ * @author YLFJM
  * @date 2018/7/10
  */
 @Slf4j

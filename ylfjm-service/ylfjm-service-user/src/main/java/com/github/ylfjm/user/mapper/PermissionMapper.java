@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * @author Zhang Bo
+ * @author YLFJM
  * @date 2018/11/2
  */
 public interface PermissionMapper extends Mapper<Permission> {

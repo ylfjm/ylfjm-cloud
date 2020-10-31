@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * 描述：针对feign文件上传的配置
  *
- * @Author Zhang Bo
+ * @author YLFJM
  * @Date 2019/1/26
  */
 @Configuration

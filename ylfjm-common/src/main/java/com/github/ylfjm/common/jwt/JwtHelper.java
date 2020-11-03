@@ -3,7 +3,6 @@ package com.github.ylfjm.common.jwt;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.ylfjm.common.JwtTokenException;
-import com.github.ylfjm.common.enums.SystemType;
 import com.github.ylfjm.common.utils.DateUtil;
 import com.github.ylfjm.common.utils.RSAUtil;
 import com.github.ylfjm.common.utils.UUIDUtil;
@@ -76,7 +75,8 @@ public class JwtHelper {
      */
     public static String createJWTToken(JWTInfo jwt) {
         //过期时间（单位：秒）
-        int expire = jwt.getType() == SystemType.SYSTEM.getValue() ? 30 * 60 : -1;
+        // int expire = jwt.getType() == SystemType.SYSTEM.getValue() ? 30 * 60 : -1;
+        int expire = 30 * 60;
         //jwt的颁发时间
         Date now = new Date();
         //JWT过期时间，设置在凌晨，使用概率比较低的时间点，避免用户正在使用token过期，数据丢失

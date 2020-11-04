@@ -71,9 +71,9 @@ public class MenuService {
             menu.setLevel(parent.getLevel() + 1);
         }
         // 一级菜单图标为必填，其它为非必填
-        if (menu.getLevel() == 1 && !StringUtils.hasText(menu.getIcon())) {
-            throw new BadRequestException("操作失败，一级菜单图标不能为空");
-        }
+        // if (menu.getLevel() == 1 && !StringUtils.hasText(menu.getIcon())) {
+        //     throw new BadRequestException("操作失败，一级菜单图标不能为空");
+        // }
         Menu query = new Menu();
         query.setName(menu.getName());
         // 同一个父级菜单下的子菜单名称不能相同，不同父级菜单下的子菜单可以同名
@@ -172,9 +172,9 @@ public class MenuService {
             menu.setLevel(parent.getLevel() + 1);
         }
         // 一级菜单图标为必填，其它为非必填
-        if (menu.getLevel() == 1 && !StringUtils.hasText(menu.getIcon())) {
-            throw new BadRequestException("操作失败，一级菜单图标不能为空");
-        }
+        // if (menu.getLevel() == 1 && !StringUtils.hasText(menu.getIcon())) {
+        //     throw new BadRequestException("操作失败，一级菜单图标不能为空");
+        // }
         // 校验菜单名称是否已经存在
         Example example = new Example(Menu.class);
         Example.Criteria criteria = example.createCriteria();

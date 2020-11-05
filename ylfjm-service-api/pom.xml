@@ -14,6 +14,7 @@
         <module>ylfjm-service-order-api</module>
         <module>ylfjm-service-product-api</module>
         <module>ylfjm-service-user-api</module>
+        <module>ylfjm-service-system-api</module>
     </modules>
 
     <dependencies>

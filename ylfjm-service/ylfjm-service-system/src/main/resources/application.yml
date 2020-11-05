@@ -5,6 +5,12 @@ server:
 spring:
   application:
     name: ylfjm-service-system
+  datasource:
+    hikari:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3333/ylfjm-sys?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false&serverTimezone=Asia/Shanghai
+      username: root
+      password: 123456
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
@@ -30,6 +36,18 @@ eureka:
     service-url:
       defaultZone: http://ylfjm:123456@localhost:30000/eureka
       zone-1: http://ylfjm:123456@localhost:30000/eureka
+mybatis:
+  type-aliases-package: com.github.ylfjm.**.po
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+mapper:
+  identity: MYSQL
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
 feign:
   httpclient:
     enabled: true

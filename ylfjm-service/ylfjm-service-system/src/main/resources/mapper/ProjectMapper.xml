@@ -5,6 +5,9 @@
 
     <select id="selectPage" resultType="com.github.ylfjm.system.po.Project">
         select * from project where deleted = 0
+        <if test="status != null and status != ''">
+            and `status` = #{status}
+        </if>
     </select>
 
 </mapper>

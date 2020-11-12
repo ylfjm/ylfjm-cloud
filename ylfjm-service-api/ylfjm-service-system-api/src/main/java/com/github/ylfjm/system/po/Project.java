@@ -35,7 +35,7 @@ public class Project {
     private Date end;
     //可用工作日
     private Integer days;
-    //项目状态
+    //项目状态：wait-未开始、doing-进行中、suspended-已挂起、closed-已关闭
     private String status;
     //被谁开启
     private String openedBy;

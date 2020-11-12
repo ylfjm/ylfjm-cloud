@@ -6,6 +6,7 @@ import com.github.ylfjm.system.service.ProjectService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -23,12 +24,14 @@ public class ProjectController {
     /**
      * 查询项目列表
      *
+     * @param status   项目状态：wait-未开始、doing-进行中、suspended-已挂起、closed-已关闭
      * @param pageNum  第几页
      * @param pageSize 每页大小
      */
     @GetMapping(value = "/project/{pageNum}/{pageSize}")
-    public PageVO<Project> page(@PathVariable Integer pageNum,
+    public PageVO<Project> page(@RequestParam(required = false) String status,
+                                @PathVariable Integer pageNum,
                                 @PathVariable Integer pageSize) {
-        return projectService.page(pageNum, pageSize);
+        return projectService.page(status, pageNum, pageSize);
     }
 }

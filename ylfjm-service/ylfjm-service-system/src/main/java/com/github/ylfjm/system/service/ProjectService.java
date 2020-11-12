@@ -28,10 +28,10 @@ public class ProjectService {
      * @param pageNum  第几页
      * @param pageSize 每页大小
      */
-    public PageVO<Project> page(int pageNum, int pageSize) {
+    public PageVO<Project> page(String status, int pageNum, int pageSize) {
         // 分页查询
         PageHelper.startPage(pageNum, pageSize);
-        Page<Project> page = projectMapper.selectPage();
+        Page<Project> page = projectMapper.selectPage(status);
         return new PageVO<>(pageNum, page);
     }
 

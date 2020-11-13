@@ -23,7 +23,7 @@ public class Project {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    //项目类型
+    //项目类型：short-短期项目、long-长期项目
     private String type;
     //项目名称
     private String name;
@@ -49,7 +49,7 @@ public class Project {
     private String canceledBy;
     //取消时间
     private Date canceledDate;
-    //访问控制('open','private','custom')
+    //访问控制：open-默认、private-私有、custom-自定义
     private String acl;
     //分组白名单
     private String whitelist;

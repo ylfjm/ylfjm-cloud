@@ -61,10 +61,10 @@ public class JwtHelper {
         //颁发token时间
         Date issuedAt = claims.getIssuedAt();
         Date now = new Date();
-        //获取JWT颁发时间3分钟后的时间
-        Date date = DateUtil.JWTTokenExpirationTime(issuedAt, 5 * 60);
+        //获取JWT颁发时间10分钟后的时间
+        Date date = DateUtil.JWTTokenExpirationTime(issuedAt, 10 * 60);
         if (now.after(date)) {
-            //如果当前时间在JWT颁发时间3分钟后，需要重新颁发token
+            //如果当前时间在JWT颁发时间10分钟后，需要重新颁发token
             return false;
         }
         return true;
@@ -76,7 +76,7 @@ public class JwtHelper {
     public static String createJWTToken(JWTInfo jwt) {
         //过期时间（单位：秒）
         // int expire = jwt.getType() == SystemType.SYSTEM.getValue() ? 30 * 60 : -1;
-        int expire = 30 * 60;
+        int expire = 2 * 60 * 60;
         //jwt的颁发时间
         Date now = new Date();
         //JWT过期时间，设置在凌晨，使用概率比较低的时间点，避免用户正在使用token过期，数据丢失

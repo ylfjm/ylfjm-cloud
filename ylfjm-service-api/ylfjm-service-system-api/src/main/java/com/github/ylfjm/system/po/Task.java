@@ -10,7 +10,7 @@ import javax.persistence.Table;
 import java.util.Date;
 
 /**
- * 描述：TODO
+ * 描述：开发任务实体类
  *
  * @Author Zhang Bo
  * @Date 2020/11/15
@@ -25,8 +25,6 @@ public class Task {
     private Integer id;
     //所属项目
     private Integer projectId;
-    //所属模块
-    private Integer module;
     //任务名称
     private String name;
     //任务类型
@@ -43,10 +41,6 @@ public class Task {
     private Date deadline;
     //任务状态：'wait','doing','done','pause','cancel','closed'
     private String status;
-    //color
-    private String color;
-    //抄送给
-    private String mailto;
     //任务描述
     private String desc;
     //由谁创建
@@ -57,16 +51,10 @@ public class Task {
     private Integer assignedTo;
     //指派日期
     private Date assignedDate;
-    //预计开始
-    private Date estStarted;
-    //实际开始
-    private Date realStarted;
     //由谁完成
     private String finishedBy;
     //完成时间
     private Date finishedDate;
-    //完成者列表
-    private String finishedList;
     //由谁取消
     private String canceledBy;
     //取消时间
@@ -81,6 +69,46 @@ public class Task {
     private String lastEditedBy;
     //最后修改日期
     private Date lastEditedDate;
+    //是否需要UI设计
+    private Boolean uiRequired;
+    //UI设计者
+    private String uiDesigner;
+    //UI预计完成日期
+    private Date uiEstimateDate;
+    //UI实际完成日期
+    private Date uiFinishedDate;
+    //是否需要web端开发
+    private Boolean webRequired;
+    //web端开发
+    private String webDeveloper;
+    //web端预计完成日期
+    private Date webEstimateDate;
+    //web端实际完成日期
+    private Date webFinishedDate;
+    //是否需要安卓端开发
+    private Boolean androidRequired;
+    //安卓端开发
+    private String androidDeveloper;
+    //安卓端预计完成日期
+    private Date androidEstimateDate;
+    //安卓端实际完成日期
+    private Date androidFinishedDate;
+    //是否需要苹果端开发
+    private Boolean iosRequired;
+    //苹果端开发
+    private String iosDeveloper;
+    //苹果端预计完成日期
+    private Date iosEstimateDate;
+    //苹果端实际完成日期
+    private Date iosFinishedDate;
+    //是否需要后端开发
+    private Boolean serverRequired;
+    //后端开发
+    private String serverDeveloper;
+    //后端预计完成日期
+    private Date serverEstimateDate;
+    //后端实际完成日期
+    private Date serverFinishedDate;
     //已删除(0-否,1-是)
     private Boolean deleted;
 

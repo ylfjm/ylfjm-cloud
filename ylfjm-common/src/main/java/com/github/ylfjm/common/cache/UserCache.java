@@ -88,4 +88,15 @@ public class UserCache {
         throw new NoLoginException();
     }
 
+    /**
+     * 获取当前登录的用户的账号
+     */
+    public static String getAccount() {
+        JWTInfo jwtInfo = getJWTInfo();
+        if (jwtInfo != null) {
+            return jwtInfo.getAccount();
+        }
+        throw new NoLoginException();
+    }
+
 }

@@ -31,12 +31,6 @@ public class Task {
     private String type;
     //优先级
     private Integer pri;
-    //最初预计
-    private Integer estimate;
-    //总消耗
-    private Integer consumed;
-    //预计剩余
-    private Integer left;
     //截止日期
     private Date deadline;
     //任务状态：'wait','doing','done','pause','cancel','closed'
@@ -44,13 +38,9 @@ public class Task {
     //任务描述
     private String desc;
     //由谁创建
-    private Integer openedBy;
+    private String openedBy;
     //创建日期
     private Date openedDate;
-    //指派给
-    private Integer assignedTo;
-    //指派日期
-    private Date assignedDate;
     //由谁完成
     private String finishedBy;
     //完成时间

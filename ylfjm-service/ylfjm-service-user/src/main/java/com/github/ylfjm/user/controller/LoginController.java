@@ -44,6 +44,7 @@ public class LoginController {
         Admin admin = adminService.login(userName, password, sysType, ip);
         JWTInfo jwtInfo = new JWTInfo();
         jwtInfo.setId(admin.getId());
+        jwtInfo.setAccount(admin.getUserName());
         jwtInfo.setRealName(admin.getRealName());
         jwtInfo.setType(sysType);
         String jwtToken = JwtHelper.createJWTToken(jwtInfo);

@@ -13,6 +13,7 @@ public class JWTInfo implements Serializable {
 
     private static final long serialVersionUID = -5277712364271453933L;
     private Integer id;
+    private String account;
     private String realName;
     private Integer type;
 

@@ -36,7 +36,7 @@ public class Task {
     //任务状态：'wait','doing','done','pause','cancel','closed'
     private String status;
     //任务描述
-    private String desc;
+    private String content;
     //由谁创建
     private String openedBy;
     //创建日期

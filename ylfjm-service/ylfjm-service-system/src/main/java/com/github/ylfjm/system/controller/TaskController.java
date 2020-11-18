@@ -36,7 +36,17 @@ public class TaskController {
     /**
      * 查询任务列表
      *
-     * @param status   项目状态：wait-未开始、doing-进行中、suspended-已挂起、closed-已关闭
+     * @param id 任务ID
+     */
+    @GetMapping(value = "/task/{id}")
+    public Task getById(@PathVariable Integer id) {
+        return taskService.getById(id);
+    }
+
+    /**
+     * 查询任务列表
+     *
+     * @param status   任务状态：wait-未开始、doing-进行中、done-已完成、pause-已暂停、cancel-已取消、closed-已关闭
      * @param pageNum  第几页
      * @param pageSize 每页大小
      */

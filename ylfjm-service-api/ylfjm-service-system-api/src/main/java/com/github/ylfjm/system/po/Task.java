@@ -33,7 +33,7 @@ public class Task {
     private Integer pri;
     //截止日期
     private Date deadline;
-    //任务状态：'wait','doing','done','pause','cancel','closed'
+    //任务状态：wait-未开始、doing-进行中、done-已完成、pause-已暂停、cancel-已取消、closed-已关闭
     private String status;
     //任务描述
     private String content;

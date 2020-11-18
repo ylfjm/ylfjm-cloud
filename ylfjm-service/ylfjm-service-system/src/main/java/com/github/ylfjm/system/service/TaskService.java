@@ -93,8 +93,22 @@ public class TaskService {
     }
 
     /**
+     * 查询单个任务
+     *
+     * @param id 任务ID
+     */
+    public Task getById(Integer id) {
+        Task task = taskMapper.selectByPrimaryKey(id);
+        if (task == null) {
+            throw new BadRequestException("查询失败，任务不存在或已被删除");
+        }
+        return task;
+    }
+
+    /**
      * 分页查询任务信息，可带查询条件
      *
+     * @param status   任务状态：wait-未开始、doing-进行中、done-已完成、pause-已暂停、cancel-已取消、closed-已关闭
      * @param pageNum  第几页
      * @param pageSize 每页大小
      */
@@ -104,5 +118,4 @@ public class TaskService {
         Page<Task> page = taskMapper.selectPage(status);
         return new PageVO<>(pageNum, page);
     }
-
 }

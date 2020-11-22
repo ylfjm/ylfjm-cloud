@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -31,6 +32,16 @@ public class TaskController {
     @PostMapping(value = "/task")
     public void add(@RequestBody Task task) {
         taskService.add(task);
+    }
+
+    /**
+     * 更新任务
+     *
+     * @param task 任务信息
+     */
+    @PutMapping(value = "/task")
+    public void update(@RequestBody Task task) {
+        taskService.update(task);
     }
 
     /**

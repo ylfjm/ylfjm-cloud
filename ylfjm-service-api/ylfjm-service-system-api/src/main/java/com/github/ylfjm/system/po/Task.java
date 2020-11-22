@@ -59,6 +59,14 @@ public class Task {
     private String lastEditedBy;
     //最后修改日期
     private Date lastEditedDate;
+    //是否需要产品设计
+    private Boolean pdRequired;
+    //产品设计者
+    private String pdDesigner;
+    //产品设计预计完成日期
+    private Date pdEstimateDate;
+    //产品设计实际完成日期
+    private Date pdFinishedDate;
     //是否需要UI设计
     private Boolean uiRequired;
     //UI设计者
@@ -99,6 +107,14 @@ public class Task {
     private Date serverEstimateDate;
     //后端实际完成日期
     private Date serverFinishedDate;
+    //是否需要测试
+    private Boolean testRequired;
+    //测试
+    private String tester;
+    //测试预计完成日期
+    private Date testEstimateDate;
+    //测试实际完成日期
+    private Date testFinishedDate;
     //已删除(0-否,1-是)
     private Boolean deleted;
 

@@ -3,20 +3,30 @@
 
 <mapper namespace="com.github.ylfjm.user.mapper.RoleMapper">
 
-    <select id="page" resultType="com.github.ylfjm.user.po.Role">
-        select
-        r.id,
-        r.`name`,
-        r.creator,
-        r.create_time,
-        r.updater,
-        r.update_time,
-        (select count(distinct admin_id) from system_admin__role where role_id = r.id) as accountCount
+    <select id="page" resultMap="userListByRoleId">
+        select distinct
+        r.id as role_id,
+        r.`name`
         from system_role r
         where r.sys_type = #{sysType}
         <if test="name!=null and name!=''">
             and r.`name` like CONCAT('%', #{name}, '%')
         </if>
+    </select>
+
+    <resultMap id="userListByRoleId" type="com.github.ylfjm.user.po.Role">
+        <result column="role_id" property="id" jdbcType="INTEGER"/>
+        <collection property="userList" ofType="com.github.ylfjm.user.po.AdminRole" select="selectAdminById" column="role_id">
+            <result column="role_id" property="roleId" jdbcType="INTEGER"/>
+        </collection>
+    </resultMap>
+
+    <select id="selectAdminById" parameterType="java.lang.Integer" resultType="com.github.ylfjm.user.po.Admin">
+        select
+        a.id,
+        a.real_name
+        from system_admin a inner join system_admin__role ar on a.id = ar.admin_id
+        where ar.role_id = #{role_id}
     </select>
 
 </mapper>

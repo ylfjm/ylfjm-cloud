@@ -9,6 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 import java.util.Date;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -37,5 +38,7 @@ public class Role {
     private Integer accountCount;//拥有该角色的管理员账号数量
     @Transient
     private Set<Integer> permissionIds;//权限ID集合
+    @Transient
+    private List<Admin> userList;
 
 }
